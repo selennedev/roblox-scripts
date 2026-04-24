@@ -116,7 +116,7 @@ end
 function Projectile:update(dt)
 	if not self.alive then return false end
 	
--- Verlet Integration 
+-- Symplectic Euler Integration 
 -- v_new = v + (gravity - drag*v) * dt
 -- drag is proportional to velocity to simulate quadratic air resistance
 local dragForce      = self.velocity * DRAG_COEFFICIENT
